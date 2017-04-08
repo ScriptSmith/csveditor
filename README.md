@@ -1,5 +1,7 @@
 # CSV Editor
 
+CSV Editor lets you remove multiple columns in CSV files
+
 ![Screenshot](img/screenshot1.png)
 
 ## Download
