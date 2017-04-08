@@ -114,7 +114,7 @@ class CSVEditor(Ui_MainWindow):
 
     def read_original_file(self):
         try:
-            with open(self.old_file_name, "r") as f:
+            with open(self.old_file_name, "r", encoding="utf-8") as f:
                 reader = csv.DictReader(f)
 
                 self.originalRowCount.setValue(0)
@@ -171,7 +171,7 @@ class UpdateRowCount(QThread):
         read_count = 0
 
         try:
-            with open(self.file_name, 'r') as f:
+            with open(self.file_name, 'r', encoding='utf-8') as f:
                 reader = csv.reader(f)
 
                 next(reader)
@@ -208,7 +208,8 @@ class WriteFile(QThread):
                 writer = csv.DictWriter(new_file, fieldnames=self.fields)
                 writer.writeheader()
 
-                with open(self.old_file_name, 'r') as old_file:
+                with open(self.old_file_name, 'r', encoding='utf-8') as \
+                        old_file:
                     reader = csv.DictReader(old_file)
 
                     for row in reader:
