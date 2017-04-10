@@ -16,9 +16,9 @@ Download CSV Editor from the list of releases [here](https://github.com/ScriptSm
 
 2. Select the columns that you want to keep
 
-     *Windows: `Ctrl` + Click*
+     *Windows: `Ctrl` + Click and `Ctrl` + `Shift` + Click*
 
-     *macOS: `⌘` + Click*
+     *macOS: `⌘` + Click and `⌘` + `Shift` + Click*
 
 3. Click the `>>` button
 
