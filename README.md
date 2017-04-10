@@ -16,6 +16,10 @@ Download CSV Editor from the list of releases [here](https://github.com/ScriptSm
 
 2. Select the columns that you want to keep
 
+     *Windows: `Ctrl` + Click*
+     
+     *macOS: `⌘` + Click*
+
 3. Click the `>>` button
 
    *If you want to delete columns from the list of new columns, select them and click the `<<` button*
