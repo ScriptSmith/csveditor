@@ -114,7 +114,7 @@ class CSVEditor(Ui_MainWindow):
 
     def read_original_file(self):
         try:
-            with open(self.old_file_name, "r", encoding="utf-8") as f:
+            with open(self.old_file_name, "r", encoding="utf-8", newline='') as f:
                 reader = csv.DictReader(f)
 
                 self.originalRowCount.setValue(0)
@@ -171,7 +171,7 @@ class UpdateRowCount(QThread):
         read_count = 0
 
         try:
-            with open(self.file_name, 'r', encoding='utf-8') as f:
+            with open(self.file_name, 'r', encoding='utf-8', newline='') as f:
                 reader = csv.reader(f)
 
                 next(reader)
@@ -204,7 +204,7 @@ class WriteFile(QThread):
             if self.new_file_name == self.old_file_name:
                 raise FileExistsError("Can't overwrite files. Give the new "
                                       "file a different name")
-            with open(self.new_file_name, 'w', encoding='utf-8') as new_file:
+            with open(self.new_file_name, 'w', encoding='utf-8', newline='') as new_file:
                 writer = csv.DictWriter(new_file, fieldnames=self.fields)
                 writer.writeheader()
 
